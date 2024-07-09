@@ -34,11 +34,6 @@ resource "aws_ssm_parameter" "secret" {
 data "aws_region" "current" {}
 
 output "sessionSecret" {
-  value = {
-    type   = "ssm"
-    key    = aws_ssm_parameter.secret.name
-    region = data.aws_region.current.name
-    arn    = aws_ssm_parameter.secret.arn
-  }
+  value = aws_ssm_parameter.secret.arn
 }
 
