@@ -37,3 +37,8 @@ output "sessionSecret" {
   value = aws_ssm_parameter.secret.arn
 }
 
+output "SESSION_SECRET" {
+  value = aws_ssm_parameter.secret.arn
+}
+
+
